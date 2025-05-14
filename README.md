@@ -1,12 +1,13 @@
 # Finance Chatbot
 
 ### Overview
-A simple question-answering system (chatbot) that allows a user to ask questions about finance-related topics and get an answer.
+A simple question-answering system (chatbot) that allows a user to ask questions about finance-related topics and get an answer. Uses gpt-4o-mini via OpenAI client.
 
 ---
 
-### Client
-Uses OpenAI client (gpt-4o-mini)
+### Prerequisites
+- Python 3.7 or higher
+- OpenAI API key
 
 ---
 
@@ -35,7 +36,7 @@ pip install openai python-dotenv
 ```
 
 4. Providing API key:
-Ensure you have created a .env file with the following line:
+Create a .env file in the root directory with the following line:
 
 ```
 OPENAI_API_KEY={your_api_key}

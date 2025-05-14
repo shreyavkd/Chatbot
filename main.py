@@ -14,11 +14,13 @@ function to produce answer based on user query
     output: response from gpt-4o-mini
 '''
 def answer_query(query):
+
+    #defining prompts for gpt-4o-mini
     messages= [
                 {"role": "system", 
                  "content": "You are a helpful financial assistant."
                  "If asked any non-financial questions, please decline politely."
-                 "If user wants to quit, request them to type 't'."},
+                 "If user wants to quit, request them to type 'q'."},
                 {"role": "user", "content": query}
             ]
 
