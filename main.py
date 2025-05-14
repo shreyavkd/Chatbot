@@ -1,8 +1,8 @@
 import openai
 from build_prompt import build_prompt
 
-#Import API
-openai.api_key = "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"
+import os
+openai.api_key = os.getenv("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")
 
 '''
 function to produce answer based on user query
