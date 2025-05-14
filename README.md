@@ -1,10 +1,12 @@
 # Finance Chatbot
+
+### Overview
 A simple question-answering system (chatbot) that allows a user to ask questions about finance-related topics and get an answer.
 
-## Client
+### Client
 Uses OpenAI client (gpt-4o-mini)
 
-## Running
+### Running
 1. Clone repository:
 Use the following command to clone the repository.
 
@@ -44,10 +46,10 @@ Run the chatbot with the following command. For examples of queries, please refe
 python main.py
 ```
 
-## Example Questions:
+### Example Questions:
 - How can I find out my credit score?
 - How do interest rates affect my savings and investments?
 - Why is gold considered a safe investment?
 - What is the difference between debt and equity financing?
 
-### Thank you!
+#### Thank you!
