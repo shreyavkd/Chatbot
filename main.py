@@ -17,13 +17,14 @@ def answer_query(query):
     messages= [
                 {"role": "system", 
                  "content": "You are a helpful financial assistant."
-                 "If asked any non-financial questions, please decline politely."},
+                 "If asked any non-financial questions, please decline politely."
+                 "If user wants to quit, request them to type 't'."},
                 {"role": "user", "content": query}
             ]
 
     try:
         response= client.chat.completions.create(model= "gpt-4o-mini", messages= messages)
-        return response.choices[0].message["content"]
+        return response.choices[0].message.content
     
     except Exception as err:
         return (f"Error:\n{err}\n")
@@ -37,9 +38,11 @@ if __name__ == "__main__":
 while True:
     user_input= input("Q: ")
 
+    #terminate execution if user types "q"
     if user_input.lower() == ("q"):
+        print("Hope I could assist with your financial queries. Goodbye!")
         exit()
 
     answer= answer_query(user_input)
-    print(f"A: {answer}\n")
+    print(f"A: {answer}\n ----- \n")
 
